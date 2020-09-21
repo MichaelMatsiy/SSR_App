@@ -13,6 +13,8 @@ namespace TrickingLibrary.Api
 		{
 			services.AddControllers();
 
+			services.AddSingleton<TrickyStore>();
+			
 			services.AddCors(options => 
 				options.AddPolicy(AllCars, build =>
 					build.AllowAnyHeader()
